@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { Platform } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import { AuthContext } from '../../contexts/auth';
 
 import {
@@ -10,21 +9,17 @@ import {
   AreaInput,
   Input,
   SubmitButton,
-  SubmitText,
-  Link,
-  LinkText } from './styles';
+  SubmitText } from '../SignIn/styles';
 
+  
 export default function SignIn() {
-  const navigation = useNavigation();
-
+    
+  const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { user } = useContext(AuthContext);
 
-  function handleLogin(){
-    console.log(user.nome);
-    console.log(user.uid);
-  }
+  console.log(user.nome);
 
   return (
     <Background>
@@ -32,7 +27,16 @@ export default function SignIn() {
         behavior={Platform.OS === 'ios' ? 'padding' : ''}
         enabled
       >
-        <Logo source={require('../../assets/Logo.png')} />
+
+        <AreaInput>
+          <Input
+            placeholder="Nome"
+            autoCorrect={false}
+            autoCapitalize="none"
+            value={nome}
+            onChageText={ (text) => setNome(text) }
+          />
+        </AreaInput>
 
         <AreaInput>
           <Input
@@ -54,13 +58,10 @@ export default function SignIn() {
           />
         </AreaInput>
 
-        <SubmitButton onPress={handleLogin}>
-          <SubmitText>Acessar</SubmitText>
+        <SubmitButton>
+          <SubmitText>Cadastrar</SubmitText>
         </SubmitButton>
 
-        <Link onPress={ () => navigation.navigate('SignUp')}>
-          <LinkText>Criar uma conta</LinkText>
-        </Link>
       </Container>
     </Background>
   );
