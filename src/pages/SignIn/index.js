@@ -19,9 +19,10 @@ export default function SignIn() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { signIn } = useContext(AuthContext);
 
   function handleLogin(){
-
+    signIn(email, password);
   }
 
   return (
@@ -38,7 +39,7 @@ export default function SignIn() {
             autoCorrect={false}
             autoCapitalize="none"
             value={email}
-            onChageText={ (text) => setEmail(text) }
+            onChangeText={ (text) => setEmail(text) }
           />
         </AreaInput>
 
@@ -48,7 +49,7 @@ export default function SignIn() {
             autoCorrect={false}
             autoCapitalize="none"
             value={password}
-            onChageText={ (text) => setPassword(text) }
+            onChangeText={ (text) => setPassword(text) }
           />
         </AreaInput>
 
@@ -56,7 +57,7 @@ export default function SignIn() {
           <SubmitText>Acessar</SubmitText>
         </SubmitButton>
 
-        <Link onPress={ () => navigation.navigate('SignUp')}>
+        <Link onPress={ () => navigation.navigate('SignUp') }>
           <LinkText>Criar uma conta</LinkText>
         </Link>
       </Container>

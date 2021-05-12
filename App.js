@@ -5,7 +5,8 @@ import { StatusBar } from 'react-native';
 import AuthProvider from './src/contexts/auth';
 import Routes from './src/routes/index';
 
-console.disableYellowBox = true;
+import { YellowBox } from "react-native";
+YellowBox.ignoreWarnings([""]);
 
 export default function App() {
   return (

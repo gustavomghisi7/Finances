@@ -37,7 +37,7 @@ export default function SignIn() {
             autoCorrect={false}
             autoCapitalize="none"
             value={nome}
-            onChageText={ (text) => setNome(text) }
+            onChangeText={ (text) => setNome(text) }
           />
         </AreaInput>
 
@@ -47,7 +47,7 @@ export default function SignIn() {
             autoCorrect={false}
             autoCapitalize="none"
             value={email}
-            onChageText={ (text) => setEmail(text) }
+            onChangeText={ (text) => setEmail(text) }
           />
         </AreaInput>
 
@@ -57,7 +57,7 @@ export default function SignIn() {
             autoCorrect={false}
             autoCapitalize="none"
             value={password}
-            onChageText={ (text) => setPassword(text) }
+            onChangeText={ (text) => setPassword(text) }
           />
         </AreaInput>
 
