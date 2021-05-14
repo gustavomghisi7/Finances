@@ -6,6 +6,7 @@ import { Container, ButtonMenu } from './styles';
 
 export default function Header() {
   const navigation = useNavigation();
+  
   return (
     <Container>
       <ButtonMenu onPress={ () => navigation.toggleDrawer() }>
