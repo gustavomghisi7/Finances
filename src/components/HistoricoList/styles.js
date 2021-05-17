@@ -22,7 +22,7 @@ export const IconView = styled.View`
 `;
 
 export const TipoText = styled.Text`
-    color #FFF;
+    color: #FFF;
     font-size: 16px;
     font-style: italic;
     margin-left: 3px;
@@ -30,6 +30,11 @@ export const TipoText = styled.Text`
 
 export const ValorText = styled.Text`
     color: #222;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
+`;
+
+export const DataText = styled.Text`
+    color : #222;
+    font-size: 12px
 `;
