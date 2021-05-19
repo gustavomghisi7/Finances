@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { View, Text, Image } from 'react-native';
 import { DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
 
@@ -23,6 +23,7 @@ export default function CustomDrawer(props) {
                     {user && user.nome}
                 </Text>
             </View>
+            
         <DrawerItemList {...props} />
         
         <DrawerItem

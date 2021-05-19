@@ -80,13 +80,13 @@ export default function Home() {
         },
         {
           text: 'Continuar',
-          onPress: () => handleDeleteSucess(data)
+          onPress: () => handleDeleteSuccess(data)
         }
       ]
     )
   }
 
-  async function handleDeleteSucess(data){
+  async function handleDeleteSuccess(data){
     await firebase.database().ref('historico')
     .child(uid).child(data.key).remove()
     .then( async () => {

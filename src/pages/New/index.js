@@ -13,7 +13,7 @@ export default function New() {
     const navigation = useNavigation();
 
     const [valor, setValor] = useState('');
-    const [tipo, setTipo] = useState('receita');
+    const [tipo, setTipo] = useState(null);
     const { user: usuario } = useContext(AuthContext);
 
     function handleSubmit(){
@@ -56,7 +56,8 @@ export default function New() {
 
             tipo === 'despesa' ? saldo -= parseFloat(valor) : saldo += parseFloat(valor);
 
-            user.child('saldo').set(saldo); 
+            user.child('saldo').set(saldo);
+            
         });
         Keyboard.dismiss();
         setValor('');

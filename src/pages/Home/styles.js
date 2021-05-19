@@ -24,7 +24,7 @@ export const Saldo = styled.Text`
 `;
 
 export const Title = styled.Text`
-    margin-left: 15px;
+    margin-left: 10px;
     color: #00B94A;
     margin-bottom: 10px;
 `;

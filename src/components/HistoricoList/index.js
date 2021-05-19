@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather'
 import { TouchableWithoutFeedback } from 'react-native';
+
 import { Container, Tipo, IconView, TipoText, ValorText, DataText} from './styles';
 
 export default function HistoricoList({ data, deleteItem }) {
@@ -11,7 +12,7 @@ export default function HistoricoList({ data, deleteItem }) {
                     <IconView tipo={data.tipo}>
                         <Icon
                             name={data.tipo === 'despesa' ? 'arrow-down' : 'arrow-up'}
-                            color='#FFF'
+                            color="#FFF"
                             size={20}
                         />
                         <TipoText>{data.tipo}</TipoText>
@@ -21,7 +22,7 @@ export default function HistoricoList({ data, deleteItem }) {
                     R${data.valor}
                 </ValorText>
                 <DataText>
-                    Data:{data.date}
+                    Data: {data.date}
                 </DataText>
             </Container>
         </TouchableWithoutFeedback>

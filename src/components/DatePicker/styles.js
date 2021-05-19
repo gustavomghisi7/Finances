@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.TouchanleOpacity`
-    background-color: ${Platform.OS === 'ios' ? '#000000066' : 'transparent'};
+export const Container = styled.TouchableOpacity`
+    background-color: ${Platform.OS === 'ios' ? '#00000066' : 'transparent'};
     position: absolute;
     justify-content: flex-end;
     width: 100%;
@@ -15,5 +15,5 @@ export const Header = styled.View`
     align-items: flex-end;
     background-color: white;
     border-bottom-width: 2px;
-    border-color: gray;
+    border-color: grey;
 `;

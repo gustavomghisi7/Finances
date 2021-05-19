@@ -20,8 +20,8 @@ export default function DatePicker({ date, onClose, onChange }) {
             value={dateNow}
             mode="date"
             display="default"
-            onChange={ (event, date) => {
-                const currentDate = date || dateNow;
+            onChange={ (e, d) => {
+                const currentDate = d || dateNow;
                 setDateNow(currentDate);
                 onChange(currentDate);
             }}
