@@ -79,7 +79,7 @@ export default function New() {
                         onChangeText={ (text) => setValor(text) }
                     />
 
-                    <Picker onChange={setTipo} />
+                    <Picker onChange={setTipo} tipo={tipo} />
 
                     <SubmitButton onPress={handleSubmit}>
                         <SubmitText>Registrar</SubmitText>
